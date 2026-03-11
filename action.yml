@@ -1,6 +1,10 @@
 name: Change Rater
 description: Evaluates the changes and categorizes them, between minimal, moderate and complex.
 
+branding:
+  icon: 'activity'
+  color: 'blue'
+
 inputs:
   github_token:
     description: 'Token para poder escribir etiquetas en el PR'
