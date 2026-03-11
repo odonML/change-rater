@@ -1,4 +1,6 @@
 # change-rater
+Automatically categorize your Pull Requests using tags based on the number of lines modified, optimizing the team's review time.
+
 
 ### test in act local 
 action-test:
