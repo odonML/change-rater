@@ -32892,7 +32892,7 @@ try {
     
     const pullRequest = context$1.payload.pull_request;
     const totalChanges = pullRequest.additions + pullRequest.deletions;
-
+    console.log(`Total changes (additions + deletions): ${totalChanges}`);
     let complexity = "no changes";
     if(totalChanges > 1 && totalChanges <= minimalThreshold) {
         complexity = "minimal";
