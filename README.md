@@ -17,7 +17,7 @@ jobs:
 
       - name: Run Change Rater
         id: change_rater
-        uses: ./ # Esto le dice a GitHub que use la acción en la carpeta actual
+        ses: odonML/change-rater@v3
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             minimal_threshold: 50
