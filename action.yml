@@ -1,0 +1,31 @@
+name: Change Rater
+description: Evaluates the changes and categorizes them, between minimal, moderate and complex.
+
+inputs:
+  github_token:
+    description: 'Token para poder escribir etiquetas en el PR'
+    required: true
+  minimal_threshold:
+    description: 'The threshold for minimal changes (default: 1 to 50)'
+    required: false
+    default: 50
+    type: number
+  moderate_threshold:
+    description: 'The threshold for moderate changes (default: 51 to 250'
+    required: false
+    default: 250
+    type: number
+  complex_threshold:
+    description: 'The threshold for complex changes (default: 251 to 500)'
+    required: false
+    default: 500
+    type: number
+
+outputs:
+  change_category:
+    description: 'The category of the changes (minimal, moderate, complex)'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
