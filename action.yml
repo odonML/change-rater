@@ -1,5 +1,6 @@
 name: Change Rater
 description: Evaluates the changes and categorizes them, between minimal, moderate and complex.
+author: odonml
 
 branding:
   icon: 'activity'
