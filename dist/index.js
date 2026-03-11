@@ -32892,14 +32892,17 @@ try {
     
     const pullRequest = context$1.payload.pull_request;
     const totalChanges = pullRequest.additions + pullRequest.deletions;
-    console.log(`Total changes (additions + deletions): ${totalChanges}`);
+    info(`Total changes (additions + deletions): ${totalChanges}`);
     let complexity = "no changes";
     if(totalChanges > 1 && totalChanges <= minimalThreshold) {
         complexity = "minimal";
+        info(`it is minimal: ${complexity}`);
     } else if(totalChanges > minimalThreshold && totalChanges <= moderateThreshold) {
         complexity = "moderate";
-    } else if(totalChanges > moderateThreshold && totalChanges > complexThreshold) {
+        info(`it is moderate: ${complexity}`);
+    } else if(totalChanges > moderateThreshold || totalChanges > complexThreshold) {
         complexity = "complex";
+        info(`it is complex: ${complexity}`);
     }
 
     const label = `change-${complexity}`;
